@@ -50,7 +50,7 @@ $ node index.js
 Para trabalharmos com testes automatizados, podemos utilizar o `mocha` [https://mochajs.org](https://mochajs.org)
 ```sh
 $ npm install -g mocha
-$ npm -i --save-dev mocha
+$ npm i --save-dev mocha
 ```
 
 Módulo utilizado para simular requisições
