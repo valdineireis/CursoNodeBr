@@ -1,11 +1,28 @@
+<!-- 
+DOCKER
+
+https://www.docker.com/
+https://hub.docker.com/
+
+https://hub.docker.com/_/mongo
+https://hub.docker.com/_/postgres
+-->
+
 docker run \
     --name postgres \
-    -e POSTGRES_USER=erickwendel \
+    -e POSTGRES_USER=valdineireis \
     -e POSTGRES_PASSWORD=minhasenhasecreta \
     -e POSTGRES_DB=heroes \
     -p 5432:5432 \
     -d \
     postgres
+
+<!-- 
+docker ps
+docker exec -it postgres /bin/bash
+
+psql
+-->
 
 docker run \
     --name adminer \
@@ -13,6 +30,8 @@ docker run \
     --link postgres:postgres \
     -d \
     adminer
+
+<!-- localhost:8080 -->
 
 ## ---- MONGODB
 docker run \
@@ -30,6 +49,8 @@ docker run \
     -d \
     mongoclient/mongoclient
 
+<!-- localhost:3000 -->
+
 docker exec -it mongodb \
     mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin \
-    --eval "db.getSiblingDB('herois').createUser({user: 'erickwendel', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"
+    --eval "db.getSiblingDB('herois').createUser({user: 'valdineireis', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"

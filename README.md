@@ -40,9 +40,20 @@ Instrução para executar a aplicação
 $ node index.js
 ```
 
-### Pacotes
+### Módulos
 | Comando | Descrição |
 | ------ | ------ |
 | npm install axios --save | Para efetuar requisições HTTP |
 | npm install mocha --save-dev | Para rodar os testes |
 | npm install nock --save-dev | Para simular requisições |
+
+Para trabalharmos com testes automatizados, podemos utilizar o `mocha` [https://mochajs.org](https://mochajs.org)
+```sh
+$ npm install -g mocha
+$ npm i --save-dev mocha
+```
+
+Módulo utilizado para simular requisições
+```sh
+$ npm install nock --save-dev
+```
